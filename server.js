@@ -3,6 +3,8 @@ const logger = require('morgan')
 
 const users = require('./routes/users')
 const vehicles = require('./routes/vehicles')
+const services = require('./routes/service')
+const insurance = require('./routes/insurance')
 require('dotenv').config()
 
 
@@ -22,6 +24,8 @@ app.set('secretKey', secretKey);
 
 app.use('/users', users)
 app.use('/vehicles', vehicles)
+app.use('/services', services)
+app.use('/insurance', insurance)
 
 
 app.get('/', (req, res) => {
