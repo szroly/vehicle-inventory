@@ -5,6 +5,7 @@ const users = require('./routes/users')
 const vehicles = require('./routes/vehicles')
 const services = require('./routes/service')
 const insurance = require('./routes/insurance')
+const equipments = require('./routes/equipments')
 require('dotenv').config()
 
 
@@ -26,6 +27,7 @@ app.use('/users', users)
 app.use('/vehicles', vehicles)
 app.use('/services', services)
 app.use('/insurance', insurance)
+app.use('/equipments', equipments)
 
 
 app.get('/', (req, res) => {
